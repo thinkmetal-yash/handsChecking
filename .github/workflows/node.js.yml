@@ -25,6 +25,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: cd react-yb 
+    - run: npm i
     - run: npm run build
     - run: cd ..
     - run: npm ci

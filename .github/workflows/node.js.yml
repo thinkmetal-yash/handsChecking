@@ -26,7 +26,7 @@ jobs:
         cache: 'npm'
     - run: cd react-yb 
     - run: npm i
-    - run: npm run build
+    - run: npm run-srcipt build
     - run: cd ..
     - run: npm ci
     - run: pm2 restart backend

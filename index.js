@@ -1,12 +1,13 @@
 var express=require('express')
 const path = require('path')
 const app=express()
+
 app.listen(5000,()=>{
     console.log('Server running on port 5000')
 })
 
-app.use(express.static(path.join(__dirname, 'react-yb', 'build')))
-app.get("*", (req, res) => {
+app.use(express.static(path.join(__dirname, 'react-yb', 'dist')))
+app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "react-yb/dist", "index.html"))
 })
 

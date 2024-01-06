@@ -24,6 +24,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: cd react-yb 
+    - run: npm run build
+    - run: cd ..
     - run: npm ci
     - run: pm2 restart backend
     
